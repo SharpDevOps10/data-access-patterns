@@ -6,7 +6,8 @@
     "lint": "eslint '**/*.ts'",
     "repository:usage": "npx tsx src/repositories/usage.ts",
     "dao:usage": "npx tsx src/dao/usage.ts",
-    "query-builder:usage": "npx tsx src/query-builder/usage.ts"
+    "query-builder:usage": "npx tsx src/query-builder/usage.ts",
+    "acitve-record:usage": "npx tsx \"src/active-record(antipattern)/usage.ts\""
   },
   "repository": {
     "type": "git",
