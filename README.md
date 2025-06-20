@@ -96,3 +96,11 @@
 - Adds overhead in large-scale systems.
 
 **Difference:** Abstracts SQL entirely. You interact with models and ORM handles the rest.
+
+# How to Run
+
+* Repository: `npm run repository:usage`;
+* DAO: `npm run dao:usage`;
+* Query Builder: `npm run query-builder:usage`;
+* Active Record: `npm run active-record:usage`;
+* ORM: `npm run orm:usage`.
