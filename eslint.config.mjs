@@ -2,11 +2,12 @@ import js from '@eslint/js';
 import parser from '@typescript-eslint/parser';
 import tsPlugin from '@typescript-eslint/eslint-plugin';
 import prettierPlugin from 'eslint-plugin-prettier';
+import tseslint from 'typescript-eslint';
 
 /** @type {import("eslint").Linter.FlatConfig[]} */
 export default [
   js.configs.recommended,
-
+  ...tseslint.configs.recommendedTypeChecked,
   {
     files: ['**/*.ts'],
     languageOptions: {
@@ -14,6 +15,14 @@ export default [
       parserOptions: {
         project: './tsconfig.json',
         sourceType: 'module',
+      },
+      ecmaVersion: 2020,
+      globals: {
+        console: 'readonly',
+        process: 'readonly',
+        __dirname: 'readonly',
+        module: 'readonly',
+        require: 'readonly',
       },
     },
     plugins: {
@@ -50,6 +59,7 @@ export default [
       'space-in-parens': 'error',
       eqeqeq: ['error', 'smart'],
       'eol-last': ['error', 'always'],
+      'no-unused-private-class-members': 'off',
     },
   },
 ];
