@@ -5,7 +5,8 @@
   "scripts": {
     "lint": "eslint '**/*.ts'",
     "repository:usage": "npx tsx src/repositories/usage.ts",
-    "dao:usage": "npx tsx src/dao/usage.ts"
+    "dao:usage": "npx tsx src/dao/usage.ts",
+    "query-builder:usage": "npx tsx src/query-builder/usage.ts"
   },
   "repository": {
     "type": "git",
