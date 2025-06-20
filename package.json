@@ -4,7 +4,8 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint '**/*.ts'",
-    "repository:usage": "npx tsx src/repositories/usage.ts"
+    "repository:usage": "npx tsx src/repositories/usage.ts",
+    "dao:usage": "npx tsx src/dao/usage.ts"
   },
   "repository": {
     "type": "git",
