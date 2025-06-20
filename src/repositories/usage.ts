@@ -6,7 +6,7 @@ import { IUserRepository } from './user.repository.interface';
 import { IUserDAO } from '../dao/user.dao.interface';
 
 /*
-/DAO handles raw DB operations.
+DAO handles raw DB operations.
 Repository uses DAO and returns domain entities
 it encapsulates persistence logic and decouples app from DB structure.
 Pros: better separation, easier testing, domain-centric code.
@@ -17,7 +17,7 @@ const main = async () => {
   const userDAO: IUserDAO = new UserDAO(pool);
   const userRepository: IUserRepository = new UserRepository(userDAO);
 
-  const newUser = new User('', 'Marcus');
+  const newUser = User.createUser('Marcus');
   const savedUser = await userRepository.save(newUser);
   console.log('Created:', savedUser);
 
